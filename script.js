@@ -13,3 +13,37 @@ burgerMenu.addEventListener('click', (e) => {
       toggleMenu()
   }
 })
+
+
+/*--------------------------*/
+
+const slides = document.querySelectorAll(".slider__slide");
+const navlinks = document.querySelectorAll(".slider__navlink");
+let currentSlide = 0;
+
+document.getElementById("right-arrow").addEventListener("click", () => {
+    changeSlide(currentSlide + 1)
+});
+document.getElementById("left-arrow").addEventListener("click", () => {
+    changeSlide(currentSlide - 1)
+});
+
+function changeSlide(moveTo) {
+    if (moveTo >= slides.length) {moveTo = 0;}
+    if (moveTo < 0) {moveTo = slides.length - 1;}
+    
+    slides[currentSlide].classList.toggle("active");
+    navlinks[currentSlide].classList.toggle("active");
+    slides[moveTo].classList.toggle("active");
+    navlinks[moveTo].classList.toggle("active");
+    
+    currentSlide = moveTo;
+}
+
+document.querySelectorAll('.slider__navlink').forEach((bullet, bulletIndex) => {
+    bullet.addEventListener('click', () => {
+        if (currentSlide !== bulletIndex) {
+            changeSlide(bulletIndex);
+        }
+    })
+})

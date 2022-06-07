@@ -161,12 +161,109 @@ body{
 }
 .main__container {
 }
+.slider{
+}
 .main__slider {
   height: 670px;
   background-image: url('./BuhOne/assets/images/head-img.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.slider__container {
+  padding-top: 170px;
+  padding-bottom: 113px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 68px;
+  overflow: hidden;
+}
+.container {
+}
+.slider__slides {
+  width: 589px;
+  height: 257px;
+}
+.slider__slide {
+  width: 589px;
+  height: 257px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 1s;
+  display: none;
+  animation-name: out;
+  animation-duration: 1s;
+}
+.slider__title {
+  width: 589px;
+  font-family: 'Merriweather';
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 66px;
+  color: #FFFFFF;
+}
+.slider__button {
+  width: 270px;
+  height: 60px;
+  background: #005FA3;
+  font-family: 'Lato';
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  transition: 1s;
+}
+.slider__slide.active {
+  display: flex;
+  animation-name: in;
+  animation-duration: 1s;
+}
+.slider__controls{
+  display: flex;
+  justify-content: space-between;
+}
+.slider__arrows {
+  display: flex;
+}
+.slider__arrow {
+  background-image: url("./BuhOne/assets/icons/slider-arrow.svg");
+  background-color: #FFFFFF;
+  width: 60px;
+  height: 60px;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.slider__arrow:nth-child(1){
+  transform: rotate(180deg);
+}
+.slider__arrow:hover{
+  opacity: 0.4;
+}
+.slider__nav {
+  width: 160px;
+  display: flex;
+  align-items: flex-end;
+  column-gap: 40px;
+}
+.slider__navlink {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.slider__navlink.active {
+  background: #FFFFFF;
+  opacity: 1;
 }
 
 @media (max-width: 930px){
@@ -255,4 +352,14 @@ body{
   .nav{
     width: 90%;
   }
+}
+
+@keyframes in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes out {
+  from {opacity: 1;}
+  to {opacity: 0;}
 }
