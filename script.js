@@ -1,10 +1,12 @@
 const burger = document.querySelector('.header__burger')
 const burgerMenu = document.querySelector('.nav')
+const overlay = document.querySelector('.overlay')
 
 function toggleMenu() {
   burgerMenu.classList.toggle('nav-open')
   document.body.classList.toggle('body-hidden')
   burger.classList.toggle('burger-open')
+  overlay.classList.toggle('overlay-block')
 }
 
 burger.addEventListener('click', toggleMenu)
@@ -13,7 +15,7 @@ burgerMenu.addEventListener('click', (e) => {
       toggleMenu()
   }
 })
-
+overlay.addEventListener('click', toggleMenu)
 
 /*--------------------------*/
 
