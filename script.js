@@ -1,6 +1,8 @@
 const burger = document.querySelector('.header__burger')
 const burgerMenu = document.querySelector('.nav')
 const overlay = document.querySelector('.overlay')
+const slides = document.querySelectorAll('.slider__slide');
+const navlinks = document.querySelectorAll('.slider__navlink');
 
 function toggleMenu() {
   burgerMenu.classList.toggle('nav-open')
@@ -19,8 +21,7 @@ overlay.addEventListener('click', toggleMenu)
 
 /*--------------------------*/
 
-const slides = document.querySelectorAll(".slider__slide");
-const navlinks = document.querySelectorAll(".slider__navlink");
+
 let currentSlide = 0;
 
 document.getElementById("right-arrow").addEventListener("click", () => {
@@ -31,9 +32,12 @@ document.getElementById("left-arrow").addEventListener("click", () => {
 });
 
 function changeSlide(moveTo) {
-    if (moveTo >= slides.length) {moveTo = 0;}
-    if (moveTo < 0) {moveTo = slides.length - 1;}
-    
+    if (moveTo >= slides.length) {
+      moveTo = 0;
+    }
+    if (moveTo < 0) {
+      moveTo = slides.length - 1;
+    }
     slides[currentSlide].classList.toggle("active");
     navlinks[currentSlide].classList.toggle("active");
     slides[moveTo].classList.toggle("active");
@@ -42,10 +46,10 @@ function changeSlide(moveTo) {
     currentSlide = moveTo;
 }
 
-document.querySelectorAll('.slider__navlink').forEach((bullet, bulletIndex) => {
-    bullet.addEventListener('click', () => {
-        if (currentSlide !== bulletIndex) {
-            changeSlide(bulletIndex);
+document.querySelectorAll('.slider__navlink').forEach((item, itemIndex) => {
+    item.addEventListener('click', () => {
+        if (currentSlide !== itemIndex) {
+            changeSlide(itemIndex);
         }
     })
 })
