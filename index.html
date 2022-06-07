@@ -6,17 +6,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>BuhOne</title>
 </head>
 <body>
-  <header></header>
-  <main></main>
-  <footer></footer>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__left">
+          <div class="header__logo"></div>
+          <div class="header__name">BuhOne</div>
+        </div>
+        <div class="header__right">
+          <div class="header__info">
+            <div class="header__info-item info-item">
+              <div class="info-item__ico phone"></div>
+              <div class="info-item__text">8 (111) 222-33-44</div>
+            </div>
+            <div class="header__info-item info-item">
+              <div class="info-item__ico time"></div>
+              <div class="info-item__text">Пн-Пт 10:00-18:00</div>
+            </div>
+            <div class="header__info-item info-item">
+              <div class="info-item__ico mail"></div>
+              <div class="info-item__text">order@buhone.ru</div>
+            </div>
+            <div class="header__info-item info-item">
+              <div class="info-item__ico place"></div>
+              <div class="info-item__text">Невский пр. 130</div>
+            </div>
+          </div>
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">ГЛАВНАЯ</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">УСЛУГИ</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">КЕЙСЫ</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">О КОМПАНИИ</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">КОНТАКТЫ</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__burger burger">
+            <span class="burger__line burger__line--1"></span>
+            <span class="burger__line burger__line--2"></span>
+            <span class="burger__line burger__line--3"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main__slider slider">
+        <div class="main__container container">
+          <div class="slider__slides">
+            <div class="slider__slide active">
+              
+            </div>
+            <div class="slider__slide">
+              
+            </div>
+            <div class="slider__slide">
+              
+            </div>
+            <div class="slider__slide">
+              
+            </div>
+          </div>
+          <div id="nav-button--prev" class="slider__nav-button"></div>
+          <div id="nav-button--next" class="slider__nav-button"></div>
+          <div class="slider__nav">
+            <div class="slider__navlink active"></div>
+            <div class="slider__navlink"></div>
+            <div class="slider__navlink"></div>
+            <div class="slider__navlink"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <!-- <div class="container">
+  
+      </div> -->
+    </footer>
+  </div>
   <script src="./script.js"></script>
 </body>
 </html>

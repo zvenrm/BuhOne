@@ -1,0 +1,258 @@
+@font-face {
+  font-family: 'Lato';
+  src: url("./BuhOne/assets/fonts/lato/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Lato Bold';
+  src: url("./BuhOne/assets/fonts/lato/Lato-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Lato Black';
+  src: url("./BuhOne/assets/fonts/lato/Lato-Black.ttf");
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  font-family: 'Lato';
+  color: #000000;
+}
+
+.wrapper{
+  max-width: 1920px;
+  margin: 0 auto;
+  background: #F9F9F9;
+  /* border: 1px solid red; */
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  border: 1px solid blue;
+}
+
+.header {
+  height: 110px;
+  padding: 22px;
+}
+
+.header__container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__left {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+}
+
+.header__logo {
+  width: 40px;
+  height: 40px;
+  background-image: url('./BuhOne/assets/icons/logo.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.header__name {
+  font-family: 'Merriweather';
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 50px;
+  color: #005FA3;
+}
+.header__right {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+}
+.header__info {
+  display: flex;
+  column-gap: 40px;
+}
+.header__info-item {
+  display: flex;
+  column-gap: 15px;
+}
+
+.phone {
+  width: 10px;
+  height: 17.21px;
+  background-image: url('./BuhOne/assets/icons/phone.svg');
+}
+.time {
+  width: 17px;
+  height: 17px;
+  background-image: url('./BuhOne/assets/icons/time.svg');
+}
+.mail {
+  width: 22.34px;
+  height: 17px;
+  background-image: url('./BuhOne/assets/icons/mail.svg');
+}
+.place {
+  width: 17px;
+  height: 17px;
+  background-image: url('./BuhOne/assets/icons/place.svg');
+}
+
+.info-item__text {
+  font-family: 'Lato';
+  font-size: 13px;
+  line-height: 17px;
+}
+.nav__list {
+  display: flex;
+  column-gap: 65px;
+}
+.nav__item {
+  list-style: none;
+}
+.nav__link {
+  font-family: 'Lato Bold';
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #222222;
+  text-decoration: none;
+}
+
+.header__burger {
+  width: 40px;
+  height: 22px;
+  position: relative;
+  display: none;
+  z-index: 11;
+  transition: 0.3s;
+}
+.burger-open{
+  transform: rotate(90deg);
+}
+.burger__line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #005FA3;
+  position: absolute;
+  left: 0;
+  transition: 0.3s;
+}
+.burger__line--1 {
+  top: 0;
+}
+.burger__line--2 {
+  top: 10px;
+}
+
+.burger__line--3{
+  bottom: 0;
+}
+
+.main {
+}
+.main__container {
+}
+.main__slider {
+  height: 670px;
+  background-image: url('./BuhOne/assets/images/head-img.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 930px){
+  .body-hidden {
+    overflow: hidden;
+  }
+
+  .header__info {
+    width: 300px;
+    flex-wrap: wrap;
+    column-gap: 0px;
+  }
+
+  .header__info-item {
+    column-gap: 0;
+    width: 150px;
+    justify-content: space-around;
+  }
+
+  .header__burger{
+    display: block;
+  }
+
+  .header__right {
+    flex-direction: row;
+    column-gap: 50px;
+    align-items: center;
+  }
+
+  .nav{
+    padding: 50px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    position: fixed;
+    height: 100vh;
+    width: 320px;
+    top: 0;
+    right: 0;
+    background: #F9F9F9;
+    z-index: 10;
+    transform: translateX(100%);
+    transition: 0.5s;
+  }
+
+  .nav-open{
+    transform: translateX(0);
+    transform: translateY(110px);
+  }
+
+  .nav__list{
+    flex-direction: column;
+    height: 100vh;
+    row-gap: 50px;
+    /* flex-wrap: wrap;
+    row-gap: 40px;
+    justify-content: center;
+    align-items: center; */
+  }
+}
+
+@media (max-width: 660px){
+  .header__info{
+    width: 150px;
+    flex-wrap: wrap;
+    column-gap: 0px;
+  }
+}
+
+@media (max-width: 510px){
+  .header__logo{
+    width: 30px;
+    height: 30px;
+  }
+
+  .header__name{
+    font-size: 26px;
+  }
+
+  .header__info{
+    display: none;
+  }
+}
+
+@media (max-width: 320px){
+  .nav{
+    width: 90%;
+  }
+}
