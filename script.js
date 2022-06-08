@@ -83,3 +83,20 @@ closeImg.addEventListener('click', () => {
   viewImg.classList.add('view-img-none')
   viewImg.classList.remove('view-img-anim')
 })
+
+/*-------------------------------------------------------------*/
+
+const questionButtons = document.querySelectorAll('.faq__accordion');
+let i;
+
+for (i = 0; i < questionButtons.length; i++) {
+  questionButtons[i].addEventListener("click", function() {
+    this.classList.toggle("active-question");
+    const panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}

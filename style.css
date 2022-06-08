@@ -548,6 +548,90 @@ body{
   transition: 0.2s;
 }
 
+/*----------------------------------------------*/
+
+
+.faq__container {
+  padding-top: 114px;
+}
+.faq__content {
+  padding-bottom: 76px;
+  background-image: url("./BuhOne/assets/images/qaa-img.png");
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.faq__title {
+  margin: 40px 0 61px 0;
+  font-family: 'Merriweather';
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 69px;
+  color: #333333;
+}
+.faq__title span{
+  color: #005FA3;
+}
+.faq__questions {
+  width: 730px;
+}
+.faq__accordion {
+  position: relative;
+  background: #EBEBEB;
+  cursor: pointer;
+  padding: 30px 0 30px 63px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-family: 'Lato Bold';
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.active-question, .faq__accordion:hover{
+  background: #005FA3;
+  color: #FFFFFF;
+}
+.faq__panel {
+  margin-bottom: 1px;
+  background-color: #005FA3;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.faq__panel p{
+  margin: 0 30px 30px 30px;
+  font-family: 'Lato Light';
+  font-size: 16px;
+  line-height: 138%;
+  color: #FFFFFF;
+}
+
+.faq__panel:last-child{
+  margin: 0;
+}
+.faq__accordion::before {
+  content: "+";
+  position: absolute;
+  font-size: 36px;
+  color: #000000;
+  top: 30px;
+  left: 20px;
+}
+.faq__accordion:hover::before{
+  color: #FFFFFF;
+}
+.active-question::before {
+  color: #FFFFFF;
+  content: "-";
+}
+
 @media (max-width: 1190px){
   .current-img {
     width: 760px;
@@ -618,6 +702,9 @@ body{
     "first first"
     "second third"
     "fourth fourth"; 
+  }
+  .faq__questions{
+    width: 95%;
   }
 }
 
@@ -738,6 +825,14 @@ body{
   .photo__fourth {
     width: 485px;
     height: 485px;
+  }
+  .faq__container{
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+  .faq__title{
+    font-size: 36px;
+    margin: 10px 0 10px 0;
   }
 }
 
