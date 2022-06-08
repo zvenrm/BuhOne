@@ -4,6 +4,11 @@ const overlay = document.querySelector('.overlay')
 const slides = document.querySelectorAll('.slider__slide');
 const navlinks = document.querySelectorAll('.slider__navlink');
 
+const images = document.querySelectorAll('.photo__item')
+const viewImg = document.querySelector('.view-img')
+const closeImg = document.querySelector('.close-img')
+const currentImg = document.querySelector('.current-img')
+
 function toggleMenu() {
   burgerMenu.classList.toggle('nav-open')
   document.body.classList.toggle('body-hidden')
@@ -52,4 +57,29 @@ document.querySelectorAll('.slider__navlink').forEach((item, itemIndex) => {
             changeSlide(itemIndex);
         }
     })
+})
+
+/*--------------------------------------------------------*/
+let indexImg
+let imgArr = []
+
+
+images.forEach(el => {
+  imgArr.push(el)
+})
+
+images.forEach(el => {
+  el.addEventListener('click', () => {
+      document.body.classList.add('overflow-none')
+      viewImg.classList.remove('view-img-none')
+      viewImg.classList.add('view-img-anim')
+      currentImg.style.backgroundImage = el.style.backgroundImage
+      indexImg = imgArr.indexOf(el)
+  })
+})
+
+closeImg.addEventListener('click', () => {
+  document.body.classList.remove('overflow-none')
+  viewImg.classList.add('view-img-none')
+  viewImg.classList.remove('view-img-anim')
 })
