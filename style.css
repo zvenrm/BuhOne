@@ -38,13 +38,11 @@ body{
   max-width: 1920px;
   margin: 0 auto;
   background: #F9F9F9;
-  /* border: 1px solid red; */
 }
 
 .container {
   max-width: 1110px;
   margin: 0 auto;
-  border: 1px solid blue;
 }
 
 .header {
@@ -776,6 +774,60 @@ body{
   color: #000000;
 }
 
+.view-form{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.view-form-none{
+  display: none;
+}
+
+.view-form .form{
+  position: relative;
+  padding: 40px 95px;
+  width: 730px;
+  height: 585px;
+  background-color: #FFFFFF;
+}
+
+.form__close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background-image: url("./BuhOne/assets/icons/cross.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.view-form .form__label{
+  color: #222222;
+}
+
+.view-form .form__input{
+  border-color: #222222;
+}
+
+.form__title{
+  margin-bottom: 77px;
+  font-family: 'Merriweather';
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 69px;
+  color: #222222;
+}
+
 @media (max-width: 1190px){
   .current-img {
     width: 760px;
@@ -941,6 +993,16 @@ body{
     left: 0;
     transform: translateX(0);
     transform: translateY(110px);
+  }
+}
+
+@media (max-width: 768px){
+  .view-form .form{
+    width: 95%;
+    padding: 20px;
+  }
+  .form__title{
+    font-size: 36px;
   }
 }
 

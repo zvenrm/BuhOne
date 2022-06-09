@@ -9,6 +9,10 @@ const viewImg = document.querySelector('.view-img')
 const closeImg = document.querySelector('.close-img')
 const currentImg = document.querySelector('.current-img')
 
+const formModal = document.querySelector('.view-form')
+const closeForm = document.querySelector('.form__close')
+const sliderButton = document.querySelectorAll('.slider__button')
+
 function toggleMenu() {
   burgerMenu.classList.toggle('nav-open')
   document.body.classList.toggle('body-hidden')
@@ -100,3 +104,38 @@ for (i = 0; i < questionButtons.length; i++) {
     }
   });
 }
+
+/*--------------------------------------------------------*/
+
+
+/* images.forEach(el => {
+  el.addEventListener('click', () => {
+      document.body.classList.add('overflow-none')
+      viewImg.classList.remove('view-img-none')
+      viewImg.classList.add('view-img-anim')
+      currentImg.style.backgroundImage = el.style.backgroundImage
+      indexImg = imgArr.indexOf(el)
+  })
+})
+
+closeImg.addEventListener('click', () => {
+  document.body.classList.remove('overflow-none')
+  viewImg.classList.add('view-img-none')
+  viewImg.classList.remove('view-img-anim')
+}) */
+sliderButton.forEach(e => {
+  e.addEventListener('click', () => {
+    document.body.classList.add('overflow-none')
+    formModal.classList.remove('view-form-none')
+    formModal.classList.add('view-img-anim')
+  })
+})
+
+
+
+
+closeForm.addEventListener('click', () => {
+  document.body.classList.remove('overflow-none')
+  formModal.classList.add('view-form-none')
+  formModal.classList.remove('view-img-anim')
+})
