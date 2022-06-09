@@ -71,19 +71,19 @@
           <div class="slider__slides">
             <div class="slider__slide active">
               <h1 class="slider__title">Бухгалтерские услуги в Санкт-Петербурге</h1>
-              <button class="slider__button">Связь с нами</button>
+              <button class="slider__button button">Связь с нами</button>
             </div>
             <div class="slider__slide">
               <h1 class="slider__title">Бухгалтерские услуги в Санкт-Петербурге</h1>
-              <button class="slider__button">Связь с нами</button>
+              <button class="slider__button button">Связь с нами</button>
             </div>
             <div class="slider__slide">
               <h1 class="slider__title">Бухгалтерские услуги в Санкт-Петербурге</h1>
-              <button class="slider__button">Связь с нами</button>
+              <button class="slider__button button">Связь с нами</button>
             </div>
             <div class="slider__slide">
               <h1 class="slider__title">Бухгалтерские услуги в Санкт-Петербурге</h1>
-              <button class="slider__button">Связь с нами</button>
+              <button class="slider__button button">Связь с нами</button>
             </div>
           </div>
           <div class="slider__controls">
@@ -200,7 +200,52 @@
           </div>
         </div>
       </section>
-
+      <section class="main__contact contact">
+        <div class="contact__container container">
+          <div class="contact__content">
+            <div class="contact__top contact-top">
+              <div class="contact-top__left">
+                <div class="contact-top__titles">
+                  <h2 class="contact__title">Связь с нами</h2>
+                  <p class="contact__text">У вас остались вопросы? Напишите нам - мы ответим в ближайшее время!</p>
+                </div>
+                <div class="contact-top__contacts">
+                  <div class="contact__phone contact-item">
+                    <div class="contact__ico"></div>
+                    <span class="contact__info">+7 (111) 222-33-44</span>
+                  </div>
+                  <div class="contact__mail contact-item">
+                    <div class="contact__ico"></div>
+                    <span class="contact__info">order@bu-one.ru</span>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-top__right">
+                <form class="contact-top__form form" method="post" action="">
+                  <div class="form__top">
+                    <div class="form__left form-section">
+                      <label class="form__label name-label" for="username">Имя</label>
+                      <input class="form__input name-input" type="text" id="username" placeholder="Иван">
+                    </div>
+                    <div class="form__right form-section">
+                      <label class="form__label fam-label" for="secondname">Фамилия</label>
+                      <input class="form__input fam-input" type="text" id="secondname" placeholder="Иванов ">
+                    </div>
+                  </div>
+                  <div class="form__bottom form-section">
+                    <label class="form__label textarea-label" for="areaname">Сообщение</label>
+                    <textarea class="form__input msg-input" id="areaname" placeholder="Ваше сообщение"></textarea>
+                  </div>
+                  <button class="form__button button" type="submit">Отправить сообщение</button>
+                </form>
+              </div>
+            </div>
+            <div class="contact__bottom contact-bottom">
+              <iframe class="form__frame" src="https://yandex.by/map-widget/v1/-/CCUyR8F60B" frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
       <div class="view-img view-img-none">
         <div class="close-img">
             <svg class="close-current">
@@ -208,12 +253,34 @@
             </svg>
         </div>
         <div class="current-img"></div>
-    </div>
+      </div>
+      <div class="view-form view-form-none">
+        <form class="form" method="post" action="">
+          <div class="form__close"></div>
+          <h2 class="form__title">Связь с нами</h2>
+          <div class="form__top">
+            <div class="form__left form-section">
+              <label class="form__label name-label" for="username">Имя</label>
+              <input class="form__input name-input" type="text" id="username" placeholder="Иван">
+            </div>
+            <div class="form__right form-section">
+              <label class="form__label fam-label" for="secondname">Фамилия</label>
+              <input class="form__input fam-input" type="text" id="secondname" placeholder="Иванов ">
+            </div>
+          </div>
+          <div class="form__bottom form-section">
+            <label class="form__label textarea-label" for="areaname">Сообщение</label>
+            <textarea class="form__input msg-input" id="areaname" placeholder="Ваше сообщение"></textarea>
+          </div>
+          <button class="form__button button" type="submit">Отправить сообщение</button>
+        </form>
+      </div>
     </main>
-    <footer>
-      <!-- <div class="container">
-  
-      </div> -->
+    <footer class="footer">
+      <div class="footer__container container">
+        <p class="footer__text">2019 (с) Все права защищены. БухОне.ру</p>
+        <p class="footer__text">Разработано: BuhOne</p>
+      </div>
     </footer>
   </div>
   <script src="./script.js"></script>

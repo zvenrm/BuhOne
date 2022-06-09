@@ -9,6 +9,27 @@ const viewImg = document.querySelector('.view-img')
 const closeImg = document.querySelector('.close-img')
 const currentImg = document.querySelector('.current-img')
 
+const formModal = document.querySelector('.view-form')
+const closeForm = document.querySelector('.form__close')
+const sliderButton = document.querySelectorAll('.slider__button')
+
+/*---------------------------------------------------------------------- */
+
+const imagesArr = ['gallery-1', 'gallery-2', 'gallery-3', 'gallery-4'];
+
+imagesArr.forEach(elem => {
+    function preloadImages() {
+        for(let i = 0; i <= 3; i++) {
+            const img = new Image();
+            img.src = `./BuhOne/assets/images/${elem}.png`;
+        }
+    }
+    preloadImages();
+})
+
+/*---------------------------------------------------------------------- */
+
+
 function toggleMenu() {
   burgerMenu.classList.toggle('nav-open')
   document.body.classList.toggle('body-hidden')
@@ -100,3 +121,19 @@ for (i = 0; i < questionButtons.length; i++) {
     }
   });
 }
+
+/*--------------------------------------------------------*/
+
+sliderButton.forEach(e => {
+  e.addEventListener('click', () => {
+    document.body.classList.add('overflow-none')
+    formModal.classList.remove('view-form-none')
+    formModal.classList.add('view-img-anim')
+  })
+})
+
+closeForm.addEventListener('click', () => {
+  document.body.classList.remove('overflow-none')
+  formModal.classList.add('view-form-none')
+  formModal.classList.remove('view-img-anim')
+})
